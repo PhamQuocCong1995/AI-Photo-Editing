@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AI Photo Editing</title>
+        <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <!-- Font -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+        <!-- Font Inter -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- font-awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        />
+    </head>
+    <body>
+        <!-- Sign-Up -->
+        <div class="form-box">
+            <div class="container">
+                <div class="sign-up__inner">
+                    <!-- left -->
+                    <div class="left-side">
+                        <div class="logo">
+                            <img
+                                src="./assets/images/form/form-logo.svg"
+                                alt=""
+                            />
+                        </div>
+
+                        <div class="sign-up-btn">
+                            <div id="move-button"></div>
+                            <button
+                                type="button"
+                                class="toggle-btn"
+                                onclick="leftClick()"
+                            >
+                                Sign up
+                            </button>
+                            <button
+                                type="button"
+                                class="toggle-btn"
+                                onclick="rightClick()"
+                            >
+                                Sign in
+                            </button>
+                        </div>
+
+                        <div class="sign-up-content">
+                            <div class="content-item">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="46"
+                                    height="46"
+                                    viewBox="0 0 46 46"
+                                    fill="none"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M26.2129 15.8125C26.2129 13.6172 27.9926 11.8375 30.1879 11.8375C32.3832 11.8375 34.1629 13.6172 34.1629 15.8125C34.1629 18.0079 32.3832 19.7875 30.1879 19.7875C27.9926 19.7875 26.2129 18.0079 26.2129 15.8125ZM30.1879 14.0375C29.2076 14.0375 28.4129 14.8322 28.4129 15.8125C28.4129 16.7928 29.2076 17.5875 30.1879 17.5875C31.1682 17.5875 31.9629 16.7928 31.9629 15.8125C31.9629 14.8322 31.1682 14.0375 30.1879 14.0375Z"
+                                        fill="white"
+                                    />
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M43.1875 33.0507V11.5C43.1875 8.28984 40.5852 5.6875 37.375 5.6875H8.625C5.41484 5.6875 2.8125 8.28984 2.8125 11.5V31.6254C2.8125 31.6253 2.8125 31.6255 2.8125 31.6254V34.5C2.8125 37.7102 5.41484 40.3125 8.625 40.3125H37.375C40.5852 40.3125 43.1875 37.7102 43.1875 34.5V33.0758C43.1876 33.0674 43.1876 33.0591 43.1875 33.0507ZM8.625 8.6875C7.0717 8.6875 5.8125 9.9467 5.8125 11.5V28.2841L14.23 20.8001C15.064 20.0596 16.1494 19.6657 17.2642 19.6987C18.3786 19.7317 19.4383 20.1889 20.2269 20.977L28.0404 28.7758L30.1446 26.6715L30.1454 26.6707C30.9165 25.8986 31.9485 25.4423 33.0386 25.3917C34.1291 25.3411 35.1992 25.7001 36.0386 26.3981L36.0402 26.3995L40.1875 29.8583V11.5C40.1875 9.9467 38.9283 8.6875 37.375 8.6875H8.625ZM40.1875 33.7646L34.1205 28.7048C33.8567 28.4858 33.52 28.3726 33.1776 28.3885C32.8349 28.4044 32.5104 28.5479 32.2681 28.7907L23.7463 37.3125H37.375C38.9283 37.3125 40.1875 36.0533 40.1875 34.5V33.7646ZM19.5036 37.3125L25.9191 30.8971L18.1067 23.0994C17.8589 22.8516 17.5257 22.7078 17.1753 22.6974C16.8251 22.687 16.4842 22.8107 16.2221 23.0432L5.8125 32.2984V34.5C5.8125 36.0533 7.0717 37.3125 8.625 37.3125H19.5036Z"
+                                        fill="white"
+                                    />
+                                </svg>
+                                <div>5 Free Image</div>
+                                <div>up to 25 megapixels</div>
+                            </div>
+                            <div class="content-item">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="46"
+                                    height="46"
+                                    viewBox="0 0 46 46"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M24.7058 5.75L28.4625 6.51667L21.2942 40.25L17.5375 39.4833L24.7058 5.75ZM37.5475 23L30.6667 16.1192V10.695L42.9717 23L30.6667 35.2858V29.8617L37.5475 23ZM3.02832 23L15.3333 10.695V16.1192L8.45249 23L15.3333 29.8617V35.2858L3.02832 23Z"
+                                        fill="white"
+                                    />
+                                </svg>
+                                <div>50 Free API previews</div>
+                                <div>per month</div>
+                            </div>
+                        </div>
+
+                        <div class="form-social">
+                            <a href="#!" class="form-social-item google">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <g clip-path="url(#clip0_450_554)">
+                                        <path
+                                            d="M23.094 9.91368L13.3042 9.91321C12.8719 9.91321 12.5215 10.2636 12.5215 10.6958V13.8231C12.5215 14.2553 12.8719 14.6057 13.3041 14.6057H18.8172C18.2135 16.1723 17.0867 17.4843 15.6492 18.3179L18 22.3871C21.7708 20.2063 24.0002 16.38 24.0002 12.0966C24.0002 11.4868 23.9553 11.0508 23.8653 10.5598C23.797 10.1869 23.4732 9.91368 23.094 9.91368Z"
+                                            fill="#167EE6"
+                                        />
+                                        <path
+                                            d="M11.9997 19.3044C9.30178 19.3044 6.94649 17.8304 5.68151 15.6492L1.6123 17.9945C3.6831 21.5834 7.56236 24.0001 11.9997 24.0001C14.1766 24.0001 16.2306 23.414 18 22.3927V22.3871L15.6493 18.3179C14.574 18.9415 13.3297 19.3044 11.9997 19.3044Z"
+                                            fill="#12B347"
+                                        />
+                                        <path
+                                            d="M18.0003 22.3924V22.3868L15.6495 18.3176C14.5743 18.9412 13.33 19.3042 12 19.3042V23.9999C14.1768 23.9999 16.2309 23.4138 18.0003 22.3924Z"
+                                            fill="#0F993E"
+                                        />
+                                        <path
+                                            d="M4.69586 12C4.69586 10.6702 5.05878 9.42613 5.68229 8.35096L1.61309 6.00562C0.586057 7.76938 0 9.81772 0 12C0 14.1823 0.586057 16.2307 1.61309 17.9945L5.68229 15.6491C5.05878 14.5739 4.69586 13.3298 4.69586 12Z"
+                                            fill="#FFD500"
+                                        />
+                                        <path
+                                            d="M11.9997 4.69565C13.7591 4.69565 15.3751 5.32078 16.6374 6.3606C16.9488 6.6171 17.4014 6.59859 17.6866 6.31335L19.9025 4.09758C20.2261 3.77395 20.2031 3.24422 19.8574 2.94431C17.7425 1.10967 14.9908 0 11.9997 0C7.56236 0 3.6831 2.41673 1.6123 6.00557L5.68151 8.35092C6.94649 6.16968 9.30178 4.69565 11.9997 4.69565Z"
+                                            fill="#FF4B26"
+                                        />
+                                        <path
+                                            d="M16.6376 6.3606C16.949 6.6171 17.4017 6.59859 17.6869 6.31335L19.9028 4.09758C20.2264 3.77395 20.2033 3.24422 19.8576 2.94431C17.7428 1.10962 14.9911 0 12 0V4.69565C13.7593 4.69565 15.3754 5.32078 16.6376 6.3606Z"
+                                            fill="#D93F21"
+                                        />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_450_554">
+                                            <rect
+                                                width="24"
+                                                height="24"
+                                                fill="white"
+                                            />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a href="#!" class="form-social-item apple">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M18.6638 23.0371C17.3716 24.3036 15.9606 24.1036 14.6024 23.5037C13.1651 22.8904 11.8464 22.8638 10.33 23.5037C8.43114 24.3303 7.42897 24.0903 6.29493 23.0371C-0.140059 16.3313 0.809366 6.11923 8.11466 5.74594C9.89483 5.83926 11.1344 6.73248 12.1761 6.81247C13.7321 6.49251 15.2222 5.57263 16.8837 5.69261C18.8748 5.85259 20.3781 6.65249 21.3671 8.09231C17.2529 10.5853 18.2287 16.0646 22 17.5978C21.2484 19.5975 20.2726 21.5839 18.6506 23.0504L18.6638 23.0371ZM12.0442 5.66595C11.8464 2.69299 14.2332 0.23997 16.976 0C17.3584 3.43957 13.8903 5.99924 12.0442 5.66595Z"
+                                        fill="white"
+                                    />
+                                </svg>
+                            </a>
+                            <a href="#!" class="form-social-item facebook">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M15.8287 3.98403H18V0.168036C16.9487 0.0544523 15.8924 -0.00162514 14.8354 3.58369e-05C11.6939 3.58369e-05 9.54572 1.99203 9.54572 5.64003V8.78402H6V13.056H9.54572V24H13.796V13.056H17.3301L17.8614 8.78402H13.796V6.06003C13.796 4.80003 14.1193 3.98403 15.8287 3.98403Z"
+                                        fill="white"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="form-divine">
+                            <div class="form-line"></div>
+                            <div class="continue">Or Continue With</div>
+                            <div class="form-line"></div>
+                        </div>
+
+                        <div class="form-input">
+                            <div class="input-box">
+                                <input
+                                    type="email"
+                                    placeholder="Enter Your Email"
+                                />
+                            </div>
+                            <div class="input-box">
+                                <input
+                                    id="password"
+                                    type="password"
+                                    placeholder="Password (6 characters minimum)"
+                                />
+                                <img
+                                    src="./assets/images/form/Eye-slash.svg"
+                                    alt=""
+                                    id="eyeicon"
+                                />
+                            </div>
+                            <div class="input-box">
+                                <input
+                                    id="password-confirm"
+                                    type="password"
+                                    placeholder="Password confirmation"
+                                />
+                                <img
+                                    src="./assets/images/form/Eye-slash.svg"
+                                    alt=""
+                                    id="eyeicon-confirm"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" id="term-checked" />
+                            <label for="term-checked">
+                                I agree to the
+                                <strong>Terms of Service</strong>,
+                                <strong>General Terms and Conditions</strong>
+                                and <strong>Privacy Policy</strong>.
+                            </label>
+                        </div>
+
+                        <div class="form-cta">
+                            <a href="#!" class="btn">Sign Up</a>
+                        </div>
+                    </div>
+                    <!-- right -->
+                    <div class="right-side">
+                        <div class="form-image-list">
+                            <div class="form-image">
+                                <img
+                                    src="./assets/images/decor-icon/function/upload-image.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="form-image">
+                                <img
+                                    src="./assets/images/decor-icon/function/remove-image.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="form-image">
+                                <img
+                                    src="./assets/images/decor-icon/function/new-image.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign-In -->
+        <div class="form-box">
+            <div class="container">
+                <div class="sign-in__inner">
+                    <!-- left -->
+                    <div class="left-side">
+                        <div class="logo">
+                            <img
+                                src="./assets/images/form/form-logo.svg"
+                                alt=""
+                            />
+                        </div>
+
+                        <div class="sign-in-btn">
+                            <div id="move-button"></div>
+                            <button
+                                type="button"
+                                class="toggle-btn"
+                                onclick="leftClick()"
+                            >
+                                Sign up
+                            </button>
+                            <button
+                                type="button"
+                                class="toggle-btn"
+                                onclick="rightClick()"
+                            >
+                                Sign in
+                            </button>
+                        </div>
+
+                        <div class="form-social">
+                            <a href="#!" class="form-social-item google">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <g clip-path="url(#clip0_450_554)">
+                                        <path
+                                            d="M23.094 9.91368L13.3042 9.91321C12.8719 9.91321 12.5215 10.2636 12.5215 10.6958V13.8231C12.5215 14.2553 12.8719 14.6057 13.3041 14.6057H18.8172C18.2135 16.1723 17.0867 17.4843 15.6492 18.3179L18 22.3871C21.7708 20.2063 24.0002 16.38 24.0002 12.0966C24.0002 11.4868 23.9553 11.0508 23.8653 10.5598C23.797 10.1869 23.4732 9.91368 23.094 9.91368Z"
+                                            fill="#167EE6"
+                                        />
+                                        <path
+                                            d="M11.9997 19.3044C9.30178 19.3044 6.94649 17.8304 5.68151 15.6492L1.6123 17.9945C3.6831 21.5834 7.56236 24.0001 11.9997 24.0001C14.1766 24.0001 16.2306 23.414 18 22.3927V22.3871L15.6493 18.3179C14.574 18.9415 13.3297 19.3044 11.9997 19.3044Z"
+                                            fill="#12B347"
+                                        />
+                                        <path
+                                            d="M18.0003 22.3924V22.3868L15.6495 18.3176C14.5743 18.9412 13.33 19.3042 12 19.3042V23.9999C14.1768 23.9999 16.2309 23.4138 18.0003 22.3924Z"
+                                            fill="#0F993E"
+                                        />
+                                        <path
+                                            d="M4.69586 12C4.69586 10.6702 5.05878 9.42613 5.68229 8.35096L1.61309 6.00562C0.586057 7.76938 0 9.81772 0 12C0 14.1823 0.586057 16.2307 1.61309 17.9945L5.68229 15.6491C5.05878 14.5739 4.69586 13.3298 4.69586 12Z"
+                                            fill="#FFD500"
+                                        />
+                                        <path
+                                            d="M11.9997 4.69565C13.7591 4.69565 15.3751 5.32078 16.6374 6.3606C16.9488 6.6171 17.4014 6.59859 17.6866 6.31335L19.9025 4.09758C20.2261 3.77395 20.2031 3.24422 19.8574 2.94431C17.7425 1.10967 14.9908 0 11.9997 0C7.56236 0 3.6831 2.41673 1.6123 6.00557L5.68151 8.35092C6.94649 6.16968 9.30178 4.69565 11.9997 4.69565Z"
+                                            fill="#FF4B26"
+                                        />
+                                        <path
+                                            d="M16.6376 6.3606C16.949 6.6171 17.4017 6.59859 17.6869 6.31335L19.9028 4.09758C20.2264 3.77395 20.2033 3.24422 19.8576 2.94431C17.7428 1.10962 14.9911 0 12 0V4.69565C13.7593 4.69565 15.3754 5.32078 16.6376 6.3606Z"
+                                            fill="#D93F21"
+                                        />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_450_554">
+                                            <rect
+                                                width="24"
+                                                height="24"
+                                                fill="white"
+                                            />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a href="#!" class="form-social-item apple">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M18.6638 23.0371C17.3716 24.3036 15.9606 24.1036 14.6024 23.5037C13.1651 22.8904 11.8464 22.8638 10.33 23.5037C8.43114 24.3303 7.42897 24.0903 6.29493 23.0371C-0.140059 16.3313 0.809366 6.11923 8.11466 5.74594C9.89483 5.83926 11.1344 6.73248 12.1761 6.81247C13.7321 6.49251 15.2222 5.57263 16.8837 5.69261C18.8748 5.85259 20.3781 6.65249 21.3671 8.09231C17.2529 10.5853 18.2287 16.0646 22 17.5978C21.2484 19.5975 20.2726 21.5839 18.6506 23.0504L18.6638 23.0371ZM12.0442 5.66595C11.8464 2.69299 14.2332 0.23997 16.976 0C17.3584 3.43957 13.8903 5.99924 12.0442 5.66595Z"
+                                        fill="white"
+                                    />
+                                </svg>
+                            </a>
+                            <a href="#!" class="form-social-item facebook">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M15.8287 3.98403H18V0.168036C16.9487 0.0544523 15.8924 -0.00162514 14.8354 3.58369e-05C11.6939 3.58369e-05 9.54572 1.99203 9.54572 5.64003V8.78402H6V13.056H9.54572V24H13.796V13.056H17.3301L17.8614 8.78402H13.796V6.06003C13.796 4.80003 14.1193 3.98403 15.8287 3.98403Z"
+                                        fill="white"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="form-divine">
+                            <div class="form-line"></div>
+                            <div class="continue">Or Continue With</div>
+                            <div class="form-line"></div>
+                        </div>
+
+                        <div class="form-input">
+                            <div class="input-box">
+                                <input
+                                    type="email"
+                                    placeholder="Enter Your Email"
+                                />
+                            </div>
+                            <div class="input-box">
+                                <input
+                                    id="password"
+                                    type="password"
+                                    placeholder="Password"
+                                />
+                                <img
+                                    src="./assets/images/form/Eye-slash.svg"
+                                    alt=""
+                                    id="eyeicon"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="form-check">
+                            <div class="form-check-left">
+                                <input type="checkbox" id="term-checked" />
+                                <label for="term-checked"> Remember me </label>
+                            </div>
+                            <div class="form-check-right">
+                                <label
+                                    ><a href="#!">
+                                        Forgot your password?
+                                    </a></label
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-cta">
+                            <a href="#!" class="btn">Sign In</a>
+                        </div>
+                    </div>
+                    <!-- right -->
+                    <div class="right-side">
+                        <div class="form-image-list">
+                            <div class="form-image">
+                                <img
+                                    src="./assets/images/form/signin-image-01.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="form-image">
+                                <img
+                                    src="./assets/images/form/signin-image-02.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <!-- Navigation -->
+                    <nav class="navbar">
+                        <div class="logo-wrap">
+                            <img
+                                src="./assets/images/Logo.svg"
+                                alt=""
+                                class="logo-icon"
+                            />
+                            <span>PixelPro</span>
+                        </div>
+
+                        <ul class="navbar-list">
+                            <li>
+                                <a href="#project" class="navbar-link active">
+                                    Project
+                                    <img
+                                        src="./assets/images/decor-icon/arrow-down.svg"
+                                        alt="Arrow down"
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#pricing" class="navbar-link">
+                                    Pricing
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#api" class="navbar-link"> API </a>
+                            </li>
+                            <li>
+                                <a href="#blog" class="navbar-link"> Blog </a>
+                            </li>
+                        </ul>
+
+                        <div class="navbar-cta">
+                            <a href="#!" class="btn btn-login">Log in</a>
+                            <a href="#!" class="btn btn-signup">
+                                Sign up for free
+                            </a>
+                        </div>
+                    </nav>
+
+                    <!-- Content -->
+                    <section class="header__content">
+                        <h1 class="header-heading">
+                            Create stunning visuals <strong>in seconds</strong>
+                        </h1>
+                        <div class="primary-function">
+                            <div class="function">
+                                <img
+                                    src="./assets/images/decor-icon/check-fill-uihut.svg"
+                                    alt="Check"
+                                />
+                                <span>Free Background Remover</span>
+                            </div>
+                            <div class="function">
+                                <img
+                                    src="./assets/images/decor-icon/check-fill-uihut.svg"
+                                    alt="Check"
+                                />
+                                <span>Remove Objects</span>
+                            </div>
+                            <div class="function">
+                                <img
+                                    src="./assets/images/decor-icon/check-fill-uihut.svg"
+                                    alt="Check"
+                                />
+                                <span>Image Upscale</span>
+                            </div>
+                        </div>
+                        <div class="try-it">
+                            <a href="#!" class="btn btn-try"> Try For Free </a>
+                        </div>
+                    </section>
+
+                    <!-- detail -->
+                    <section class="header__detail">
+                        <div class="detail-top">
+                            <div class="group-dots">
+                                <div class="decor-dot"></div>
+                                <div class="decor-dot"></div>
+                                <div class="decor-dot"></div>
+                            </div>
+                            <div class="detail-top__wrap">
+                                <img
+                                    src="./assets/images/decor-icon/Lock.svg"
+                                    alt="Lock"
+                                />
+                                <span>PixelPro</span>
+                            </div>
+                        </div>
+                        <div class="detail-bottom">
+                            <div class="logo-wrap">
+                                <img
+                                    src="./assets/images/Logo.svg"
+                                    alt=""
+                                    class="logo-icon"
+                                />
+                                <span>PixelPro</span>
+                            </div>
+                            <div class="detail-bottom__list">
+                                <div class="detail-bottom__img">
+                                    <img
+                                        src="./assets/images/decor-icon/function/upload-image.png"
+                                        alt=""
+                                    />
+                                    <div>Upload your image</div>
+                                </div>
+                                <div class="detail-bottom__img">
+                                    <img
+                                        src="./assets/images/decor-icon/function/remove-image.png"
+                                        alt=""
+                                    />
+                                    <div>Automatically remove background</div>
+                                </div>
+                                <div class="detail-bottom__img">
+                                    <img
+                                        src="./assets/images/decor-icon/function/new-image.png"
+                                        alt=""
+                                    />
+                                    <div>
+                                        Select new or upload new background
+                                    </div>
+                                </div>
+                                <img
+                                    src="./assets/images/decor-detail-bottom/decor-01.svg"
+                                    alt=""
+                                    class="decor1"
+                                />
+                                <img
+                                    src="./assets/images/decor-detail-bottom/decor-02.svg"
+                                    alt=""
+                                    class="decor2"
+                                />
+                                <img
+                                    src="./assets/images/decor-detail-bottom/decor-03.svg"
+                                    alt=""
+                                    class="decor3"
+                                />
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Background -->
+                    <img
+                        src="./assets/images/background-image.png"
+                        alt="Background"
+                        class="background"
+                    />
+                </div>
+            </div>
+        </header>
+
+        <!-- Client -->
+        <section class="client">
+            <div class="container">
+                <div class="client__inner">
+                    <div class="client-text">
+                        Trusted by 10k+ Business Partners
+                    </div>
+                    <div class="client-list">
+                        <div class="client-item">
+                            <img
+                                src="./assets/images/client/facebook.svg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="client-item">
+                            <img
+                                src="./assets/images/client/amazon.svg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="client-item">
+                            <img
+                                src="./assets/images/client/figma.svg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="client-item">
+                            <img
+                                src="./assets/images/client/adobe.svg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="client-item">
+                            <img
+                                src="./assets/images/client/instagram.svg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="client-item">
+                            <img
+                                src="./assets/images/client/shopify.svg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="client-item">
+                            <img
+                                src="./assets/images/client/shopee.svg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="client-item">
+                            <img
+                                src="./assets/images/client/aliexpress.svg"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <main>
+            <!-- Feature -->
+            <section class="feature">
+                <div class="container">
+                    <div class="feature__inner">
+                        <h2 class="section-heading feature-heading">
+                            Meet your new <strong>AI design assistant</strong>
+                        </h2>
+                        <p class="section-desc feature-desc">
+                            Save days of productivity by letting ClipDrop’s
+                            artificial intelligence do the boring and
+                            time-consuming tasks.
+                        </p>
+
+                        <div class="feature-list">
+                            <!-- Feature 1 -->
+                            <section class="remove-background">
+                                <div class="remove-background__info">
+                                    <h3 class="section-heading remove-heading">
+                                        <strong>Erase any</strong> background
+                                    </h3>
+                                    <p class="section-desc remove-desc">
+                                        Edit photos quickly and accurately
+                                        without all the effort. PhotoRoom makes
+                                        it easy to keep the focus on the
+                                        foreground, plus it's 2x more accurate
+                                        than other apps.
+                                    </p>
+                                    <div class="remove-tryfree">
+                                        <a href="#!" class="btn btn-tryfree">
+                                            Try For Free
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="remove-background__action">
+                                    <img
+                                        src="./assets/images/feature/remove-background.svg"
+                                        alt=""
+                                    />
+                                </div>
+                            </section>
+
+                            <!-- Feature 2 -->
+                            <section class="remove-object">
+                                <div class="remove-object__content">
+                                    <img
+                                        src="./assets/images/feature/remove-object-image.svg"
+                                        alt=""
+                                    />
+                                </div>
+
+                                <div class="remove-object__info">
+                                    <h3
+                                        class="section-heading remove-object-heading"
+                                    >
+                                        <strong>Remove objects</strong> with a
+                                        swipe
+                                    </h3>
+                                    <p class="section-desc remove-object-desc">
+                                        Instantly remove unwanted objects and
+                                        defects. With just a swipe of your
+                                        fingertip, you can make sure your
+                                        snapshots are flawless.
+                                    </p>
+                                    <div class="remove-object-tryfree">
+                                        <a href="#!" class="btn btn-tryfree">
+                                            Try For Free
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Feature 3 -->
+                            <section class="relight">
+                                <div class="relight__info">
+                                    <h3 class="section-heading relight-heading">
+                                        <strong>Erase any</strong> background
+                                    </h3>
+                                    <p class="section-desc relight-desc">
+                                        Edit photos quickly and accurately
+                                        without all the effort. PhotoRoom makes
+                                        it easy to keep the focus on the
+                                        foreground, plus it's 2x more accurate
+                                        than other apps.
+                                    </p>
+                                    <div class="relight-tryfree">
+                                        <a href="#!" class="btn btn-tryfree">
+                                            Try For Free
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="relight__content">
+                                    <img
+                                        src="./assets/images/feature/relight-image.svg"
+                                        alt=""
+                                    />
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="more-feature">
+                        <div class="more-feature__inner">
+                            <div class="more-list">
+                                <!-- item 1 -->
+                                <div class="more-list__item">
+                                    <img
+                                        src="./assets/images/feature/more-list-icon-01.svg"
+                                        alt="More list icon"
+                                    />
+                                    <div class="info">
+                                        <div class="title">
+                                            Eliminate acne, wrinkles on the Face
+                                        </div>
+                                        <div class="description">
+                                            A picture when you have facial
+                                            wrinkles, red pimples, or other skin
+                                            flaws.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- item 2 -->
+                                <div class="more-list__item">
+                                    <img
+                                        src="./assets/images/feature/more-list-icon-02.svg"
+                                        alt="More list icon"
+                                    />
+                                    <div class="info">
+                                        <div class="title">Fix old photos</div>
+                                        <div class="description">
+                                            Simply choose the problematic areas
+                                            on the photo to remove blemishes,
+                                            stains, and rips.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- item 3 -->
+                                <div class="more-list__item">
+                                    <img
+                                        src="./assets/images/feature/more-list-icon-03.svg"
+                                        alt="More list icon"
+                                    />
+                                    <div class="info">
+                                        <div class="title">
+                                            Eliminate acne, wrinkles on the Face
+                                        </div>
+                                        <div class="description">
+                                            A totally free AI photo altering
+                                            tool is called PixelPro. Simple to
+                                            use, quick photo editing. Be happy
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- item 4 -->
+                                <div class="more-list__item">
+                                    <img
+                                        src="./assets/images/feature/more-list-icon-04.svg"
+                                        alt="More list icon"
+                                    />
+                                    <div class="info">
+                                        <div class="title">
+                                            Eliminate acne, wrinkles on the Face
+                                        </div>
+                                        <div class="description">
+                                            Use PixelPro on your smartphone or
+                                            web browser to edit images anywhere.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="remove-tryfree">
+                                <a href="#!" class="btn btn-tryfree">
+                                    Try For Free
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonial -->
+            <section class="testimonial">
+                <div class="container">
+                    <div class="testimonial__inner">
+                        <div class="testimonial-top">
+                            <h2 class="seation-heading testimonial-heading">
+                                <strong>People love</strong> PixelPro
+                            </h2>
+                            <div class="testimonial-button">
+                                <div class="pre-button" onclick="prev()">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                                <div class="next-button" onclick="next()">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-list">
+                            <!-- Testimonial item 1 -->
+                            <div id="testimonial1" class="testimonial-item">
+                                <div class="testimonial-brand">
+                                    <img
+                                        src="./assets/images/testimonial/iceberg.svg"
+                                        alt=""
+                                    />
+
+                                    <blockquote>
+                                        “With Popwork, I have access to all the
+                                        important information of my team. With
+                                        Popwork, I have access to all the
+                                        important. With Popwork, I have access
+                                        to all the important information of my
+                                        team. With Popwork”
+                                    </blockquote>
+                                    <div class="testimonial-writer">
+                                        <img
+                                            src="./assets/images/testimonial/avatar/writer-01.jpg"
+                                            alt="avatar"
+                                            class="testimonial-avatar"
+                                        />
+
+                                        <div class="testimonial-writer__info">
+                                            <div class="name">
+                                                Aliénor Behaghel
+                                            </div>
+                                            <div class="position">
+                                                Co Founder at webdesign.gdn
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial item 2 -->
+                            <div id="testimonial2" class="testimonial-item">
+                                <div class="testimonial-brand">
+                                    <img
+                                        src="./assets/images/testimonial/iceberg.svg"
+                                        alt=""
+                                    />
+
+                                    <blockquote>
+                                        “With Popwork, I have access to all the
+                                        important information of my team. With
+                                        Popwork, I have access to all the
+                                        important. With Popwork, I have access
+                                        to all the important information of my
+                                        team. With Popwork”
+                                    </blockquote>
+                                    <div class="testimonial-writer">
+                                        <img
+                                            src="./assets/images/testimonial/avatar/writer-02.jpg"
+                                            alt="avatar"
+                                            class="testimonial-avatar"
+                                        />
+
+                                        <div class="testimonial-writer__info">
+                                            <div class="name">Moskur Alom</div>
+                                            <div class="position">
+                                                Co Founder at webdesign.gdn
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial item 3 -->
+                            <div id="testimonial3" class="testimonial-item">
+                                <div class="testimonial-brand">
+                                    <img
+                                        src="./assets/images/testimonial/iceberg.svg"
+                                        alt=""
+                                    />
+
+                                    <blockquote>
+                                        “With Popwork, I have access to all the
+                                        important information of my team. With
+                                        Popwork, I have access to all the
+                                        important. With Popwork, I have access
+                                        to all the important information of my
+                                        team. With Popwork”
+                                    </blockquote>
+                                    <div class="testimonial-writer">
+                                        <img
+                                            src="./assets/images/testimonial/avatar/writer-03.jpg"
+                                            alt="avatar"
+                                            class="testimonial-avatar"
+                                        />
+
+                                        <div class="testimonial-writer__info">
+                                            <div class="name">
+                                                Aliénor Behaghel
+                                            </div>
+                                            <div class="position">
+                                                Co Founder at webdesign.gdn
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial item 4 -->
+                            <div id="testimonial4" class="testimonial-item">
+                                <div class="testimonial-brand">
+                                    <img
+                                        src="./assets/images/testimonial/iceberg.svg"
+                                        alt=""
+                                    />
+
+                                    <blockquote>
+                                        “With Popwork, I have access to all the
+                                        important information of my team. With
+                                        Popwork, I have access to all the
+                                        important. With Popwork, I have access
+                                        to all the important information of my
+                                        team. With Popwork”
+                                    </blockquote>
+                                    <div class="testimonial-writer">
+                                        <img
+                                            src="./assets/images/testimonial/avatar/writer-04.jpg"
+                                            alt="avatar"
+                                            class="testimonial-avatar"
+                                        />
+
+                                        <div class="testimonial-writer__info">
+                                            <div class="name">Moskur Alom</div>
+                                            <div class="position">
+                                                Co Founder at webdesign.gdn
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial item 5 -->
+                            <div id="testimonial5" class="testimonial-item">
+                                <div class="testimonial-brand">
+                                    <img
+                                        src="./assets/images/testimonial/iceberg.svg"
+                                        alt=""
+                                    />
+
+                                    <blockquote>
+                                        “With Popwork, I have access to all the
+                                        important information of my team. With
+                                        Popwork, I have access to all the
+                                        important. With Popwork, I have access
+                                        to all the important information of my
+                                        team. With Popwork”
+                                    </blockquote>
+                                    <div class="testimonial-writer">
+                                        <img
+                                            src="./assets/images/testimonial/avatar/writer-05.jpg"
+                                            alt="avatar"
+                                            class="testimonial-avatar"
+                                        />
+
+                                        <div class="testimonial-writer__info">
+                                            <div class="name">Moskur Alom</div>
+                                            <div class="position">
+                                                Co Founder at webdesign.gdn
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial item 6 -->
+                            <div id="testimonial6" class="testimonial-item">
+                                <div class="testimonial-brand">
+                                    <img
+                                        src="./assets/images/testimonial/iceberg.svg"
+                                        alt=""
+                                    />
+
+                                    <blockquote>
+                                        “With Popwork, I have access to all the
+                                        important information of my team. With
+                                        Popwork, I have access to all the
+                                        important. With Popwork, I have access
+                                        to all the important information of my
+                                        team. With Popwork”
+                                    </blockquote>
+                                    <div class="testimonial-writer">
+                                        <img
+                                            src="./assets/images/testimonial/avatar/writer-01.jpg"
+                                            alt="avatar"
+                                            class="testimonial-avatar"
+                                        />
+
+                                        <div class="testimonial-writer__info">
+                                            <div class="name">
+                                                Aliénor Behaghel
+                                            </div>
+                                            <div class="position">
+                                                Co Founder at webdesign.gdn
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial item 7 -->
+                            <div id="testimonial7" class="testimonial-item">
+                                <div class="testimonial-brand">
+                                    <img
+                                        src="./assets/images/testimonial/iceberg.svg"
+                                        alt=""
+                                    />
+
+                                    <blockquote>
+                                        “With Popwork, I have access to all the
+                                        important information of my team. With
+                                        Popwork, I have access to all the
+                                        important. With Popwork, I have access
+                                        to all the important information of my
+                                        team. With Popwork”
+                                    </blockquote>
+                                    <div class="testimonial-writer">
+                                        <img
+                                            src="./assets/images/testimonial/avatar/writer-02.jpg"
+                                            alt="avatar"
+                                            class="testimonial-avatar"
+                                        />
+
+                                        <div class="testimonial-writer__info">
+                                            <div class="name">Moskur Alom</div>
+                                            <div class="position">
+                                                Co Founder at webdesign.gdn
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-dot">
+                            <a href="#testimonial1" class="dot"></a>
+                            <a href="#testimonial2" class="dot"></a>
+                            <a href="#testimonial3" class="dot"></a>
+                            <a href="#testimonial4" class="dot"></a>
+                            <a href="#testimonial5" class="dot"></a>
+                            <a href="#testimonial6" class="dot"></a>
+                            <a href="#testimonial7" class="dot"></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog -->
+            <section class="blog">
+                <div class="container">
+                    <div class="blog__inner">
+                        <h2 class="section-heading blog-heading">
+                            Latest Articles
+                        </h2>
+
+                        <div class="blog-list">
+                            <!-- Blog item 1 -->
+                            <div class="blog-item">
+                                <img
+                                    src="./assets/images/blog/blog-image-01.jpg"
+                                    alt=""
+                                    class="blog-img"
+                                />
+                                <div class="blog-item__info">
+                                    <div class="title">
+                                        10 Effective Strategies to Remove
+                                        Background from Images
+                                    </div>
+                                    <p class="desc">
+                                        High-quality pictures are not enough,
+                                        but editing them is also essential for
+                                        taking good pictures, lighting, angles,
+                                        and many factors impact.
+                                    </p>
+                                    <div class="blog-writer">
+                                        <img
+                                            src="./assets/images/testimonial/avatar/writer-02.jpg"
+                                            alt=""
+                                            class="blog-avatar"
+                                        />
+                                        <div class="name">Moinul Hasan</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Blog item 2 -->
+                            <div class="blog-item">
+                                <img
+                                    src="./assets/images/blog/blog-image-02.jpg"
+                                    alt=""
+                                    class="blog-img"
+                                />
+                                <div class="blog-item__info">
+                                    <div class="title">
+                                        7 Powerful Strategies to Build Stronger
+                                        Relationships
+                                    </div>
+                                    <p class="desc">
+                                        A passport is an essential travel
+                                        document confirming identity and
+                                        citizenship. A passport photo with a
+                                        plain background is required to ensure
+                                        that the photo.
+                                    </p>
+                                    <div class="blog-writer">
+                                        <img
+                                            src="./assets/images/testimonial/avatar/writer-03.jpg"
+                                            alt=""
+                                            class="blog-avatar"
+                                        />
+                                        <div class="name">Ksenia Sverku</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="remove-tryfree">
+                            <a href="#!" class="btn btn-tryfree">
+                                See All Posts
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="faq">
+                <div class="container">
+                    <div class="faq__inner">
+                        <h2 class="section-heading faq-heading">FAQs</h2>
+                        <div class="faq-list">
+                            <!-- FAQ item 1 -->
+                            <div class="faq-item">
+                                <div class="question">
+                                    <h3>
+                                        How to remove the background of a
+                                        picture for free?
+                                    </h3>
+                                    <div class="faq-item__icon">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        To remove the background of a picture,
+                                        go to PixelPro.co/remove-background, and
+                                        upload your image. PixelPro will remove
+                                        the background for you, and you will be
+                                        able to download your HD image for free.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ item 2 -->
+                            <div class="faq-item">
+                                <div class="question">
+                                    <h3>
+                                        How to remove an object from a picture?
+                                    </h3>
+                                    <div class="faq-item__icon">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        To remove the background of a picture,
+                                        go to PixelPro.co/remove-background, and
+                                        upload your image. PixelPro will remove
+                                        the background for you, and you will be
+                                        able to download your HD image for free.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ item 3 -->
+                            <div class="faq-item">
+                                <div class="question">
+                                    <h3>
+                                        How to remove a person from a picture?
+                                    </h3>
+                                    <div class="faq-item__icon">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        To remove the background of a picture,
+                                        go to PixelPro.co/remove-background, and
+                                        upload your image. PixelPro will remove
+                                        the background for you, and you will be
+                                        able to download your HD image for free.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ item 4 -->
+                            <div class="faq-item">
+                                <div class="question">
+                                    <h3>How to remove watermark?</h3>
+                                    <div class="faq-item__icon">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        To remove the background of a picture,
+                                        go to PixelPro.co/remove-background, and
+                                        upload your image. PixelPro will remove
+                                        the background for you, and you will be
+                                        able to download your HD image for free.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ item 5 -->
+                            <div class="faq-item">
+                                <div class="question">
+                                    <h3>
+                                        How to remove background from picture on
+                                        iPhone?
+                                    </h3>
+                                    <div class="faq-item__icon">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        To remove the background of a picture,
+                                        go to PixelPro.co/remove-background, and
+                                        upload your image. PixelPro will remove
+                                        the background for you, and you will be
+                                        able to download your HD image for free.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ item 6 -->
+                            <div class="faq-item">
+                                <div class="question">
+                                    <h3>
+                                        How to remove background from picture on
+                                        Android?
+                                    </h3>
+                                    <div class="faq-item__icon">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        To remove the background of a picture,
+                                        go to PixelPro.co/remove-background, and
+                                        upload your image. PixelPro will remove
+                                        the background for you, and you will be
+                                        able to download your HD image for free.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Download -->
+            <section class="download">
+                <div class="container">
+                    <div class="download__inner">
+                        <h3 class="section-heading download-heading">
+                            Go further with PixelPro
+                        </h3>
+
+                        <p class="section-desc download-desc">
+                            Want to unlock even more features to make your
+                            photos shine? With PixelPro, you'll get access to
+                            useful features like Batch Editor, HD quality, Smart
+                            Resize, and more.
+                        </p>
+
+                        <div class="download-cta">
+                            <img
+                                src="./assets/images/download/App Store.svg"
+                                alt="App store"
+                                class="app-store"
+                            />
+                            <img
+                                src="./assets/images/download/Google Play.svg"
+                                alt="Google play"
+                                class="google-play"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <!-- Footer left -->
+                    <div class="footer__left">
+                        <div class="footer-logo">
+                            <img
+                                src="./assets/images/footer/footer-logo.svg"
+                                alt="Footer logo"
+                            />
+                        </div>
+
+                        <p class="section-desc footer-desc">
+                            PixelPro is a smart AI background removal and image
+                            editor tool that lets you edit single or bulk images
+                            with precision.
+                        </p>
+
+                        <div class="social-list">
+                            <a href="#!" class="social-item">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M24 12.0729C24 5.40566 18.627 0 12 0C5.373 0 0 5.40566 0 12.0729C0 18.0994 4.388 23.0935 10.125 23.999V15.563H7.078V12.0719H10.125V9.41388C10.125 6.3886 11.917 4.7165 14.658 4.7165C15.97 4.7165 17.344 4.95293 17.344 4.95293V7.92387H15.83C14.339 7.92387 13.874 8.8545 13.874 9.80927V12.0729H17.202L16.67 15.564H13.874V24C19.612 23.0935 24 18.0983 24 12.0729Z"
+                                        fill="white"
+                                    />
+                                </svg>
+                            </a>
+                            <a href="#!" class="social-item">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M23.953 4.38229C23.0545 4.78789 22.1026 5.05564 21.128 5.17689C22.1541 4.54454 22.9224 3.55286 23.291 2.38501C22.34 2.95405 21.286 3.36827 20.164 3.59896C19.4238 2.78736 18.4429 2.24907 17.3736 2.06768C16.3044 1.88628 15.2067 2.07193 14.2509 2.5958C13.2952 3.11966 12.5349 3.95243 12.0881 4.96478C11.6412 5.97713 11.533 7.11242 11.78 8.19435C7.69 7.99646 4.067 5.98175 1.64 2.93867C1.19879 3.70745 0.968664 4.58429 0.974 5.47628C0.974 7.22954 1.844 8.77056 3.162 9.6759C2.38086 9.6504 1.61697 9.43386 0.934 9.04432V9.10584C0.933557 10.271 1.32627 11.4004 2.04551 12.3024C2.76474 13.2046 3.76621 13.8238 4.88 14.055C4.1583 14.2533 3.40241 14.283 2.668 14.1421C2.98412 15.1449 3.59766 16.0214 4.42301 16.6495C5.24837 17.2775 6.24435 17.6258 7.272 17.6456C5.53153 19.046 3.38248 19.8062 1.17 19.8038C0.78 19.8038 0.391 19.7802 0 19.7351C2.25571 21.216 4.87851 22.002 7.557 22C16.61 22 21.555 14.3144 21.555 7.66119C21.555 7.44588 21.555 7.23057 21.54 7.01525C22.506 6.30253 23.3392 5.41765 24 4.40279L23.953 4.38229Z"
+                                        fill="#C3C3C3"
+                                    />
+                                </svg>
+                            </a>
+                            <a href="#!" class="social-item">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M23.498 6.15506C23.3624 5.64162 23.095 5.173 22.7226 4.79613C22.3502 4.41926 21.8858 4.14737 21.376 4.00769C19.505 3.5 12 3.5 12 3.5C12 3.5 4.495 3.5 2.623 4.00769C2.11341 4.14762 1.64929 4.41961 1.27708 4.79644C0.904861 5.17329 0.637591 5.64178 0.502 6.15506C0 8.04909 0 12 0 12C0 12 0 15.9509 0.502 17.8449C0.637586 18.3584 0.904975 18.827 1.27739 19.2039C1.64981 19.5807 2.11418 19.8527 2.624 19.9923C4.495 20.5 12 20.5 12 20.5C12 20.5 19.505 20.5 21.377 19.9923C21.8869 19.8528 22.3513 19.5809 22.7237 19.204C23.0961 18.8271 23.3635 18.3585 23.499 17.8449C24 15.9509 24 12 24 12C24 12 24 8.04909 23.498 6.15506ZM9.545 15.587V8.41302L15.818 12L9.545 15.587Z"
+                                        fill="#C3C3C3"
+                                    />
+                                </svg>
+                            </a>
+                            <a href="#!" class="social-item">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M12 2.163C15.204 2.163 15.584 2.175 16.85 2.233C20.102 2.381 21.621 3.924 21.769 7.152C21.827 8.417 21.838 8.797 21.838 12.001C21.838 15.206 21.826 15.585 21.769 16.85C21.62 20.075 20.105 21.621 16.85 21.769C15.584 21.827 15.206 21.839 12 21.839C8.796 21.839 8.416 21.827 7.151 21.769C3.891 21.62 2.38 20.07 2.232 16.849C2.174 15.584 2.162 15.205 2.162 12C2.162 8.796 2.175 8.417 2.232 7.151C2.381 3.924 3.896 2.38 7.151 2.232C8.417 2.175 8.796 2.163 12 2.163ZM12 0C8.741 0 8.333 0.014 7.053 0.072C2.695 0.272 0.273 2.69 0.073 7.052C0.014 8.333 0 8.741 0 12C0 15.259 0.014 15.668 0.072 16.948C0.272 21.306 2.69 23.728 7.052 23.928C8.333 23.986 8.741 24 12 24C15.259 24 15.668 23.986 16.948 23.928C21.302 23.728 23.73 21.31 23.927 16.948C23.986 15.668 24 15.259 24 12C24 8.741 23.986 8.333 23.928 7.053C23.732 2.699 21.311 0.273 16.949 0.073C15.668 0.014 15.259 0 12 0V0ZM12 5.838C8.597 5.838 5.838 8.597 5.838 12C5.838 15.403 8.597 18.163 12 18.163C15.403 18.163 18.162 15.404 18.162 12C18.162 8.597 15.403 5.838 12 5.838ZM12 16C9.791 16 8 14.21 8 12C8 9.791 9.791 8 12 8C14.209 8 16 9.791 16 12C16 14.21 14.209 16 12 16ZM18.406 4.155C17.61 4.155 16.965 4.8 16.965 5.595C16.965 6.39 17.61 7.035 18.406 7.035C19.201 7.035 19.845 6.39 19.845 5.595C19.845 4.8 19.201 4.155 18.406 4.155Z"
+                                        fill="#C3C3C3"
+                                    />
+                                </svg>
+                            </a>
+                            <a href="#!" class="social-item">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.188 11.846 12.905 13.291 12.905 14.785V20.452H9.351V9H12.765V10.561H12.811C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.337 7.433C4.193 7.433 3.274 6.507 3.274 5.368C3.274 4.23 4.194 3.305 5.337 3.305C6.477 3.305 7.401 4.23 7.401 5.368C7.401 6.507 6.476 7.433 5.337 7.433ZM7.119 20.452H3.555V9H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.771 24H22.222C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0L22.225 0Z"
+                                        fill="#C3C3C3"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Footer right -->
+                    <div class="footer__right">
+                        <div class="footer-row">
+                            <!-- Footer column 1 -->
+                            <section class="footer-column">
+                                <h3 class="section-heading footer-heading">
+                                    Product
+                                </h3>
+                                <ul class="footer-list">
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Remove Background
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Remove Objects
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Upscale
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Pricing
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            API Docs
+                                        </a>
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <!-- Footer column 2 -->
+                            <section class="footer-column">
+                                <h3 class="section-heading footer-heading">
+                                    Services
+                                </h3>
+                                <ul class="footer-list">
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            PixelPro Production
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Studio Hire
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Affiliate Program
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Request a Quote
+                                        </a>
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <!-- Footer column 3 -->
+                            <section class="footer-column">
+                                <h3 class="section-heading footer-heading">
+                                    Resources
+                                </h3>
+                                <ul class="footer-list">
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            How To BG Remove
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Our Blog
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Help Center
+                                        </a>
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <!-- Footer column 4 -->
+                            <section class="footer-column">
+                                <h3 class="section-heading footer-heading">
+                                    Company
+                                </h3>
+                                <ul class="footer-list">
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            About
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Contact
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Privacy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Terms
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Cookies
+                                        </a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <p class="footer__copyright">Copyright & Design By Uihut</p>
+            </div>
+        </footer>
+    </body>
+    <script src="./assets/javascript/javascript.js"></script>
+</html>

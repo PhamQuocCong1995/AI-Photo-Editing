@@ -1,0 +1,17 @@
+@use "../abstracts";
+@use "../abstracts/color";
+
+.btn {
+    --height: 52px;
+    height: var(--height);
+    min-width: 152px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: color.$text-color;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: var(--height);
+    text-align: center;
+    background: abstracts.$button-color;
+}
