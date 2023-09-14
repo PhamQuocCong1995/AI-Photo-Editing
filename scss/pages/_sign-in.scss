@@ -1,7 +1,12 @@
 @use "../abstracts/color";
 @use "../abstracts/mixins";
 
+body {
+    height: 100vh;
+}
+
 .form-box {
+    margin-top: 52px;
     .sign-up__inner {
         padding: 0 135px;
         display: flex;

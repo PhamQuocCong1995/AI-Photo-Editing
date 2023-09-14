@@ -1,6 +1,10 @@
 @use "../abstracts/color";
 @use "../abstracts/mixins";
 
+body {
+    height: 100vh;
+}
+
 .form-box {
     .sign-in__inner {
         padding: 0 135px;

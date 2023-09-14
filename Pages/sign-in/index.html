@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign In</title>
+        <link rel="stylesheet" href="/assets/css/main.css   " />
+
+        <!-- Font -->
+        <link rel="stylesheet" href="/assets/fonts/stylesheet.css" />
+        <!-- Font Inter -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- font-awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <!-- Navigation -->
+            <nav class="navbar">
+                <div class="logo-wrap">
+                    <img
+                        src="/assets/images/Logo.svg"
+                        alt=""
+                        class="logo-icon"
+                    />
+                    <span>PixelPro</span>
+                </div>
+
+                <ul class="navbar-list">
+                    <li>
+                        <a href="#project" class="navbar-link active">
+                            Project
+                            <img
+                                src="/assets/images/decor-icon/arrow-down.svg"
+                                alt="Arrow down"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#pricing" class="navbar-link"> Pricing </a>
+                    </li>
+                    <li>
+                        <a href="#api" class="navbar-link"> API </a>
+                    </li>
+                    <li>
+                        <a href="#blog" class="navbar-link"> Blog </a>
+                    </li>
+                </ul>
+
+                <div class="navbar-cta">
+                    <a href="/Pages/sign-in/index.html" class="btn btn-login"
+                        >Log in</a
+                    >
+                    <a href="/Pages/sign-up/index.html" class="btn btn-signup">
+                        Sign up for free
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Sign-In -->
+        <div class="form-box">
+            <div class="container">
+                <div class="sign-in__inner">
+                    <!-- left -->
+                    <div class="left-side">
+                        <div class="logo">
+                            <img
+                                src="/assets/images/form/form-logo.svg"
+                                alt=""
+                            />
+                        </div>
+
+                        <div class="sign-in-btn">
+                            <div id="move-button"></div>
+                            <button
+                                type="button"
+                                class="toggle-btn"
+                                onclick="leftClick()"
+                            >
+                                Sign up
+                            </button>
+                            <button
+                                type="button"
+                                class="toggle-btn"
+                                onclick="rightClick()"
+                            >
+                                Sign in
+                            </button>
+                        </div>
+
+                        <div class="form-social">
+                            <a href="#!" class="form-social-item google">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <g clip-path="url(#clip0_450_554)">
+                                        <path
+                                            d="M23.094 9.91368L13.3042 9.91321C12.8719 9.91321 12.5215 10.2636 12.5215 10.6958V13.8231C12.5215 14.2553 12.8719 14.6057 13.3041 14.6057H18.8172C18.2135 16.1723 17.0867 17.4843 15.6492 18.3179L18 22.3871C21.7708 20.2063 24.0002 16.38 24.0002 12.0966C24.0002 11.4868 23.9553 11.0508 23.8653 10.5598C23.797 10.1869 23.4732 9.91368 23.094 9.91368Z"
+                                            fill="#167EE6"
+                                        />
+                                        <path
+                                            d="M11.9997 19.3044C9.30178 19.3044 6.94649 17.8304 5.68151 15.6492L1.6123 17.9945C3.6831 21.5834 7.56236 24.0001 11.9997 24.0001C14.1766 24.0001 16.2306 23.414 18 22.3927V22.3871L15.6493 18.3179C14.574 18.9415 13.3297 19.3044 11.9997 19.3044Z"
+                                            fill="#12B347"
+                                        />
+                                        <path
+                                            d="M18.0003 22.3924V22.3868L15.6495 18.3176C14.5743 18.9412 13.33 19.3042 12 19.3042V23.9999C14.1768 23.9999 16.2309 23.4138 18.0003 22.3924Z"
+                                            fill="#0F993E"
+                                        />
+                                        <path
+                                            d="M4.69586 12C4.69586 10.6702 5.05878 9.42613 5.68229 8.35096L1.61309 6.00562C0.586057 7.76938 0 9.81772 0 12C0 14.1823 0.586057 16.2307 1.61309 17.9945L5.68229 15.6491C5.05878 14.5739 4.69586 13.3298 4.69586 12Z"
+                                            fill="#FFD500"
+                                        />
+                                        <path
+                                            d="M11.9997 4.69565C13.7591 4.69565 15.3751 5.32078 16.6374 6.3606C16.9488 6.6171 17.4014 6.59859 17.6866 6.31335L19.9025 4.09758C20.2261 3.77395 20.2031 3.24422 19.8574 2.94431C17.7425 1.10967 14.9908 0 11.9997 0C7.56236 0 3.6831 2.41673 1.6123 6.00557L5.68151 8.35092C6.94649 6.16968 9.30178 4.69565 11.9997 4.69565Z"
+                                            fill="#FF4B26"
+                                        />
+                                        <path
+                                            d="M16.6376 6.3606C16.949 6.6171 17.4017 6.59859 17.6869 6.31335L19.9028 4.09758C20.2264 3.77395 20.2033 3.24422 19.8576 2.94431C17.7428 1.10962 14.9911 0 12 0V4.69565C13.7593 4.69565 15.3754 5.32078 16.6376 6.3606Z"
+                                            fill="#D93F21"
+                                        />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_450_554">
+                                            <rect
+                                                width="24"
+                                                height="24"
+                                                fill="white"
+                                            />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a href="#!" class="form-social-item apple">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M18.6638 23.0371C17.3716 24.3036 15.9606 24.1036 14.6024 23.5037C13.1651 22.8904 11.8464 22.8638 10.33 23.5037C8.43114 24.3303 7.42897 24.0903 6.29493 23.0371C-0.140059 16.3313 0.809366 6.11923 8.11466 5.74594C9.89483 5.83926 11.1344 6.73248 12.1761 6.81247C13.7321 6.49251 15.2222 5.57263 16.8837 5.69261C18.8748 5.85259 20.3781 6.65249 21.3671 8.09231C17.2529 10.5853 18.2287 16.0646 22 17.5978C21.2484 19.5975 20.2726 21.5839 18.6506 23.0504L18.6638 23.0371ZM12.0442 5.66595C11.8464 2.69299 14.2332 0.23997 16.976 0C17.3584 3.43957 13.8903 5.99924 12.0442 5.66595Z"
+                                        fill="white"
+                                    />
+                                </svg>
+                            </a>
+                            <a href="#!" class="form-social-item facebook">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M15.8287 3.98403H18V0.168036C16.9487 0.0544523 15.8924 -0.00162514 14.8354 3.58369e-05C11.6939 3.58369e-05 9.54572 1.99203 9.54572 5.64003V8.78402H6V13.056H9.54572V24H13.796V13.056H17.3301L17.8614 8.78402H13.796V6.06003C13.796 4.80003 14.1193 3.98403 15.8287 3.98403Z"
+                                        fill="white"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="form-divine">
+                            <div class="form-line"></div>
+                            <div class="continue">Or Continue With</div>
+                            <div class="form-line"></div>
+                        </div>
+
+                        <div class="form-input">
+                            <div class="input-box">
+                                <input
+                                    type="email"
+                                    placeholder="Enter Your Email"
+                                />
+                            </div>
+                            <div class="input-box">
+                                <input
+                                    id="password"
+                                    type="password"
+                                    placeholder="Password"
+                                />
+                                <img
+                                    src="/assets/images/form/Eye-slash.svg"
+                                    alt=""
+                                    id="eyeicon"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="form-check">
+                            <div class="form-check-left">
+                                <input type="checkbox" id="term-checked" />
+                                <label for="term-checked"> Remember me </label>
+                            </div>
+                            <div class="form-check-right">
+                                <label
+                                    ><a href="#!">
+                                        Forgot your password?
+                                    </a></label
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-cta">
+                            <a href="#!" class="btn">Sign In</a>
+                        </div>
+                    </div>
+                    <!-- right -->
+                    <div class="right-side">
+                        <div class="form-image-list">
+                            <div class="form-image">
+                                <img
+                                    src="/assets/images/form/signin-image-01.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="form-image">
+                                <img
+                                    src="/assets/images/form/signin-image-02.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="/assets/javascript/javascript.js"></script>
+</html>
