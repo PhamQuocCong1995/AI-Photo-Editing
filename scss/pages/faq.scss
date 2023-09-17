@@ -1,0 +1,104 @@
+@use "../abstracts/color";
+@use "../abstracts/mixins";
+
+.questions {
+    padding: 52px 0 100px;
+
+    .container {
+        width: 1170px;
+    }
+
+    &-heading strong {
+        background: linear-gradient(110deg, #722fff 54.47%, #b12eff 97.51%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &-desc {
+        margin-top: 18px;
+    }
+
+    .faq {
+        &__inner {
+            padding: 0;
+        }
+
+        &-list {
+            margin-top: 47px;
+        }
+
+        &-item {
+            margin: 24px auto 0;
+        }
+    }
+}
+
+.more-question {
+    padding: 80px 0;
+    .container {
+        padding: 0 100px;
+        width: 1170px;
+    }
+
+    &__inner {
+        border-radius: 20px;
+        background: linear-gradient(108deg, #b12eff 23.26%, #722fff 100.11%);
+        padding: 48px 101px;
+    }
+
+    .avatar-list {
+        position: relative;
+        @include mixins.flexCenter;
+
+        .avatar {
+            width: 48px;
+            height: 48px;
+            border: 1.5px solid #fff;
+            border-radius: 200px;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            &:nth-child(1) {
+                margin-right: 8px;
+            }
+
+            &:nth-child(3) {
+                margin-left: 8px;
+            }
+
+            &--bigger {
+                position: absolute;
+                width: 56px;
+                height: 56px;
+            }
+        }
+    }
+
+    &-heading {
+        font-size: 2.8rem;
+        margin-top: 28px;
+        font-weight: 600;
+        line-height: 1.36; /* 135.714% */
+    }
+
+    &-desc {
+        margin-top: 12px;
+    }
+
+    &-cta {
+        @include mixins.flexCenter;
+        margin-top: 28px;
+
+        a {
+            min-width: 155px;
+            border-radius: 25px;
+            background: var(--white-white, #fff);
+            color: #0058ff;
+        }
+    }
+}

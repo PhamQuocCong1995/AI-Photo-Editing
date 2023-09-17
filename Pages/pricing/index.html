@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pricing</title>
+        <link rel="stylesheet" href="../../assets/css/main.css" />
+
+        <!-- Font -->
+        <link rel="stylesheet" href="../../assets/fonts/stylesheet.css" />
+        <!-- Font Google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans&display=swap"
+            rel="stylesheet"
+        />
+        <!-- font-awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <!-- Navigation -->
+            <nav class="navbar">
+                <div class="logo-wrap">
+                    <img
+                        src="../../assets/images/Logo.svg"
+                        alt=""
+                        class="logo-icon"
+                    />
+                    <span>PixelPro</span>
+                </div>
+
+                <ul class="navbar-list">
+                    <li>
+                        <a href="#project" class="navbar-link active">
+                            Project
+                            <img
+                                src="../../assets/images/decor-icon/arrow-down.svg"
+                                alt="Arrow down"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#pricing" class="navbar-link"> Pricing </a>
+                    </li>
+                    <li>
+                        <a href="#api" class="navbar-link"> API </a>
+                    </li>
+                    <li>
+                        <a href="#blog" class="navbar-link"> Blog </a>
+                    </li>
+                </ul>
+
+                <div class="navbar-cta">
+                    <a
+                        href="../../Pages/sign-in/index.html"
+                        class="btn btn-login"
+                        >Log in</a
+                    >
+                    <a
+                        href="../../Pages/sign-up/index.html"
+                        class="btn btn-signup"
+                    >
+                        Sign up for free
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <main>
+            <!-- Pricing -->
+            <section class="pricing">
+                <div class="container">
+                    <div class="pricing__inner">
+                        <h1 class="section-heading pricing-heading">
+                            Plans and <strong>Pricing </strong>
+                        </h1>
+                        <p class="section-desc pricing-desc">
+                            Choose a plan that fits your requirements the best
+                        </p>
+                        <div class="monthly-fee">
+                            <span>Monthly</span>
+                            <div class="switch"></div>
+                            <span>Yearly</span>
+                            <div class="discount">
+                                <strong>15%</strong> off for yearly
+                            </div>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="65"
+                                height="28"
+                                viewBox="0 0 65 28"
+                                fill="none"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M1.21372 9.53184C9.2949 16.9545 19.6362 27.2636 24.7956 27.1495C28.3558 27.1696 31.5709 26.3699 34.2194 24.8056C36.868 23.2413 38.887 20.9495 40.1375 18.088C40.4298 17.2953 40.6543 16.4441 40.781 15.5482C41.3936 16.0362 42.0109 16.4891 42.6118 16.9004C45.9552 19.2063 49.6848 20.6391 52.841 20.1126C56.0463 19.5947 58.2783 17.4705 59.4557 14.7137C60.5387 11.7413 60.9858 8.39082 60.7779 4.80735L60.6999 2.41985C61.5139 3.80487 62.4526 5.15661 63.4954 6.44524C63.7444 6.75288 64.1373 6.88689 64.3731 6.74456C64.6088 6.60223 64.5981 6.23747 64.3492 5.92983C63.1592 4.45945 62.1136 2.90136 61.2471 1.30658L61.2391 1.29185L61.2304 1.27727C61.0577 0.984925 60.7306 0.779979 60.4515 0.792123L60.4483 0.79229C58.697 0.879714 57.0893 1.30726 55.7227 2.04848C55.479 2.18069 55.4768 2.54089 55.718 2.85301C55.9591 3.16513 56.3522 3.31097 56.5959 3.17876C57.4757 2.70158 58.4641 2.36507 59.53 2.17765C59.7059 8.316 59.7579 15.3053 54.73 18.0456C53.615 18.7156 52.2403 19.0355 50.7163 18.9797C49.1923 18.9238 47.5613 18.4938 45.9543 17.7241C44.3491 16.9475 42.8109 15.9239 41.3793 14.7309C41.2149 14.602 41.0514 14.4706 40.8892 14.3367C40.9521 12.6405 40.648 10.8165 39.797 8.94755C39.2082 7.59711 38.2044 5.84425 36.6492 5.19407C36.2666 5.03865 35.8879 4.99239 35.564 5.06148C35.24 5.13058 34.9862 5.31174 34.8365 5.58071C34.5172 6.20671 34.6612 7.12599 34.8535 7.93616C35.5623 10.3903 37.5253 12.7335 39.7154 14.6574C39.6427 15.4047 39.4797 16.115 39.2252 16.7747C38.1946 19.4887 36.46 21.7085 34.1365 23.2868C31.8131 24.8651 28.9539 25.7658 25.7485 25.9293C18.8741 25.1718 10.2122 14.8269 3.97934 10.1096C3.26949 9.65529 2.33015 9.21084 1.6491 8.6675C0.938408 8.09542 0.541801 8.91468 1.21372 9.53184ZM38.5374 8.46704C39.2835 10.132 39.6911 11.7896 39.7516 13.3348C38.8942 12.5272 38.0981 11.6452 37.415 10.6925C36.9093 9.96831 36.462 9.18384 36.1817 8.40522C35.9513 7.75302 35.6988 6.76759 36.0292 6.3082C36.2816 5.9292 36.8635 6.33746 37.2879 6.67094C37.8193 7.20918 38.2488 7.82657 38.5374 8.46704Z"
+                                    fill="#FFCB01"
+                                />
+                                <path
+                                    d="M9.40492 10.4562L4.79687 8.32766C4.46227 8.19819 4.26321 7.81027 4.27083 7.5058C4.25897 7.22141 4.62151 7.14409 4.93662 7.29366L9.54468 9.42224C9.85979 9.57181 10.0783 9.93963 10.0411 10.2154C10.0334 10.5198 9.70055 10.6259 9.40492 10.4562Z"
+                                    fill="#FFCB01"
+                                />
+                                <path
+                                    d="M3.78383 14.8303L1.63311 13.2519L1.57382 13.1945C1.26803 12.976 1.14774 12.6254 1.23414 12.3583C1.3307 12.1401 1.70341 12.1116 2.0092 12.3301C2.43562 12.6734 2.88308 12.9949 3.33053 13.3165C3.62884 13.5308 3.92714 13.7452 4.21921 13.966C4.55465 14.2132 4.69442 14.5437 4.55889 14.8021C4.49198 15.0491 4.09979 15.0977 3.78383 14.8303Z"
+                                    fill="#FFCB01"
+                                />
+                            </svg>
+                        </div>
+                        <div class="pricing-list">
+                            <!-- Item 1 -->
+                            <div class="pricing-item">
+                                <div class="icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="28"
+                                        height="28"
+                                        viewBox="0 0 28 28"
+                                        fill="white"
+                                    >
+                                        <g clip-path="url(#clip0_442_389)">
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M2.58012 9.26972C2.19041 7.4641 2.69721 5.50379 4.1005 4.1005C5.50381 2.69721 7.4641 2.19041 9.26972 2.5801C10.2709 1.02778 12.0154 0 14 0C15.9845 0 17.729 1.02779 18.7303 2.58012C20.5359 2.19041 22.4962 2.69721 23.8995 4.1005C25.3028 5.50381 25.8096 7.4641 25.4199 9.26972C26.9723 10.2709 28 12.0154 28 14C28 15.9845 26.9723 17.729 25.4199 18.7303C25.8096 20.5359 25.3028 22.4962 23.8995 23.8995C22.4962 25.3028 20.5359 25.8096 18.7303 25.4199C17.729 26.9723 15.9845 28 14 28C12.0154 28 10.2709 26.9723 9.26972 25.4199C7.4641 25.8096 5.50381 25.3028 4.1005 23.8995C2.69721 22.4962 2.19041 20.5359 2.58012 18.7303C1.02778 17.729 0 15.9845 0 14C0 12.0154 1.02778 10.2709 2.58012 9.26972ZM10.0038 17.9893C12.2004 20.1858 15.7618 20.1858 17.9584 17.9893C20.155 15.7927 20.155 12.2313 17.9584 10.0347C15.7618 7.83808 12.2004 7.83808 10.0038 10.0347C7.80718 12.2313 7.80718 15.7927 10.0038 17.9893Z"
+                                                fill="white"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_442_389">
+                                                <rect
+                                                    width="28"
+                                                    height="28"
+                                                    fill="white"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+
+                                <div class="package">Free</div>
+                                <div class="price">$0</div>
+                                <div class="time">Per Month</div>
+                                <div class="pricing-cta">
+                                    <a href="#!" class="btn">Sign up now</a>
+                                </div>
+                                <div class="included">What's included?</div>
+                                <div class="border"></div>
+                                <div class="pricing-detail">
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">60 Credits</div>
+                                    </div>
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">15 GB Storage</div>
+                                    </div>
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">
+                                            15 GB Bandwidth, or
+                                        </div>
+                                    </div>
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">
+                                            PixelPro Transformations 45
+                                        </div>
+                                    </div>
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">
+                                            13.5K Basic Transformations
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="pricing-item">
+                                <div class="icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="28"
+                                        height="28"
+                                        viewBox="0 0 28 28"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_443_396)">
+                                            <path
+                                                d="M21.849 20.151L15.6978 14L21.849 7.8489L28 14L21.849 20.151ZM6.1511 20.151L0 14L6.1511 7.8489L12.3022 14L6.1511 20.151ZM14 28L7.8489 21.849L14 15.6978L20.151 21.849L14 28ZM14 12.3022L7.8489 6.1511L14 0L20.151 6.1511L14 12.3022Z"
+                                                fill="white"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_443_396">
+                                                <rect
+                                                    width="28"
+                                                    height="28"
+                                                    fill="white"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+
+                                <div class="package">Starter</div>
+                                <div class="price">$19</div>
+                                <div class="time">Per Month</div>
+                                <div class="pricing-cta">
+                                    <a href="#!" class="btn">Sign up now</a>
+                                </div>
+                                <div class="included">What's included?</div>
+                                <div class="border"></div>
+                                <div class="pricing-detail">
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">400 Credits</div>
+                                    </div>
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">100 GB Storage</div>
+                                    </div>
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">
+                                            100 GB Bandwidth, or
+                                        </div>
+                                    </div>
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">
+                                            PixelPro Transformations 400
+                                        </div>
+                                    </div>
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">
+                                            90K Basic Transformations
+                                        </div>
+                                    </div>
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">24/7 Support</div>
+                                    </div>
+                                </div>
+                                <div class="most-popular">Most Popular</div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="pricing-item">
+                                <div class="icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="28"
+                                        height="28"
+                                        viewBox="0 0 28 28"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_443_398)">
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M3.67669 14C-5.17213 24.589 3.41102 33.1722 14 24.3233C24.5869 33.1722 33.1722 24.5809 24.3233 14C33.1722 3.41102 24.5869 -5.17213 14 3.67669C3.41102 -5.17213 -5.17213 3.41102 3.67669 14ZM14 19.18C16.8609 19.18 19.18 16.8609 19.18 14C19.18 11.1392 16.8609 8.82 14 8.82C11.1392 8.82 8.82 11.1392 8.82 14C8.82 16.8609 11.1392 19.18 14 19.18Z"
+                                                fill="white"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_443_398">
+                                                <rect
+                                                    width="28"
+                                                    height="28"
+                                                    fill="white"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+
+                                <div class="package">Basic</div>
+                                <div class="price">$79</div>
+                                <div class="time">Per Month</div>
+                                <div class="pricing-cta">
+                                    <a href="#!" class="btn">Sign up now</a>
+                                </div>
+                                <div class="included">What's included?</div>
+                                <div class="border"></div>
+                                <div class="pricing-detail">
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">1200 Credits</div>
+                                    </div>
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">500 GB Storage</div>
+                                    </div>
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">
+                                            500 GB Bandwidth, or
+                                        </div>
+                                    </div>
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">
+                                            PixelPro Transformations 1200
+                                        </div>
+                                    </div>
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">
+                                            340K Basic Transformations
+                                        </div>
+                                    </div>
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">24/7 Support</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="pricing-item">
+                                <div class="icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="28"
+                                        height="28"
+                                        viewBox="0 0 28 28"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_443_398)">
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M3.67669 14C-5.17213 24.589 3.41102 33.1722 14 24.3233C24.5869 33.1722 33.1722 24.5809 24.3233 14C33.1722 3.41102 24.5869 -5.17213 14 3.67669C3.41102 -5.17213 -5.17213 3.41102 3.67669 14ZM14 19.18C16.8609 19.18 19.18 16.8609 19.18 14C19.18 11.1392 16.8609 8.82 14 8.82C11.1392 8.82 8.82 11.1392 8.82 14C8.82 16.8609 11.1392 19.18 14 19.18Z"
+                                                fill="white"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_443_398">
+                                                <rect
+                                                    width="28"
+                                                    height="28"
+                                                    fill="white"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+
+                                <div class="package">Premium</div>
+                                <div class="price">$299</div>
+                                <div class="time">Per Month</div>
+                                <div class="pricing-cta">
+                                    <a href="#!" class="btn">Sign up now</a>
+                                </div>
+                                <div class="included">What's included?</div>
+                                <div class="border"></div>
+                                <div class="pricing-detail">
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">6000 Credits</div>
+                                    </div>
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">1.8 TB Storage</div>
+                                    </div>
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">
+                                            1.8 TB Bandwidth, or
+                                        </div>
+                                    </div>
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">
+                                            PixelPro Transformations 5000
+                                        </div>
+                                    </div>
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">
+                                            1.5MK Basic Transformations
+                                        </div>
+                                    </div>
+                                    <div class="pricing-detail-item">
+                                        <img
+                                            src="../../assets/images/pricing/Check-circle.svg"
+                                            class="pricing-detail-icon"
+                                        />
+                                        <div class="text">24/7 Support</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI Product -->
+            <section class="ai-product">
+                <div class="container">
+                    <div class="ai-product__inner">
+                        <h2 class="section-heading ai-product-heading">
+                            Power up with our AI product suite
+                        </h2>
+                    </div>
+
+                    <div class="ai-product-list">
+                        <!-- Item 1 -->
+                        <div class="ai-product-item">
+                            <img
+                                src="../../assets/images/pricing/ai-product-01.png"
+                                alt=""
+                            />
+                            <div class="title">Remove BG</div>
+                            <div class="desc">
+                                Remove any Background, person, text, or defect
+                                from pictures in one click
+                            </div>
+                            <div class="ai-product-cta">
+                                <a href="#!" class="btn">Try For Free</a>
+                            </div>
+                        </div>
+                        <!-- Item 1 -->
+                        <div class="ai-product-item">
+                            <img
+                                src="../../assets/images/pricing/ai-product-02.png"
+                                alt=""
+                            />
+                            <div class="title">Upscale</div>
+                            <div class="desc">
+                                Modern AI is used by us to upscale and improve
+                                photos. Convert your SD photos to HD photos.
+                            </div>
+                            <div class="ai-product-cta">
+                                <a href="#!" class="btn">Try For Free</a>
+                            </div>
+                        </div>
+                        <!-- Item 1 -->
+                        <div class="ai-product-item">
+                            <img
+                                src="../../assets/images/pricing/ai-product-03.png"
+                                alt=""
+                            />
+                            <div class="title">Relight</div>
+                            <div class="desc">
+                                Modern AI is used by us to upscale and improve
+                                photos. Convert your normal photos to RGB
+                                photos.
+                            </div>
+                            <div class="ai-product-cta">
+                                <a href="#!" class="btn">Try For Free</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="faq">
+                <div class="container">
+                    <div class="faq__inner">
+                        <h2 class="section-heading faq-heading">FAQs</h2>
+                        <div class="faq-list">
+                            <!-- FAQ item 1 -->
+                            <div class="faq-item">
+                                <div class="question">
+                                    <h3>
+                                        How to remove the background of a
+                                        picture for free?
+                                    </h3>
+                                    <div class="faq-item__icon">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        To remove the background of a picture,
+                                        go to PixelPro.co/remove-background, and
+                                        upload your image. PixelPro will remove
+                                        the background for you, and you will be
+                                        able to download your HD image for free.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ item 2 -->
+                            <div class="faq-item">
+                                <div class="question">
+                                    <h3>
+                                        How to remove an object from a picture?
+                                    </h3>
+                                    <div class="faq-item__icon">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        To remove the background of a picture,
+                                        go to PixelPro.co/remove-background, and
+                                        upload your image. PixelPro will remove
+                                        the background for you, and you will be
+                                        able to download your HD image for free.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ item 3 -->
+                            <div class="faq-item">
+                                <div class="question">
+                                    <h3>
+                                        How to remove a person from a picture?
+                                    </h3>
+                                    <div class="faq-item__icon">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        To remove the background of a picture,
+                                        go to PixelPro.co/remove-background, and
+                                        upload your image. PixelPro will remove
+                                        the background for you, and you will be
+                                        able to download your HD image for free.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ item 4 -->
+                            <div class="faq-item">
+                                <div class="question">
+                                    <h3>How to remove watermark?</h3>
+                                    <div class="faq-item__icon">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        To remove the background of a picture,
+                                        go to PixelPro.co/remove-background, and
+                                        upload your image. PixelPro will remove
+                                        the background for you, and you will be
+                                        able to download your HD image for free.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ item 5 -->
+                            <div class="faq-item">
+                                <div class="question">
+                                    <h3>
+                                        How to remove background from picture on
+                                        iPhone?
+                                    </h3>
+                                    <div class="faq-item__icon">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        To remove the background of a picture,
+                                        go to PixelPro.co/remove-background, and
+                                        upload your image. PixelPro will remove
+                                        the background for you, and you will be
+                                        able to download your HD image for free.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ item 6 -->
+                            <div class="faq-item">
+                                <div class="question">
+                                    <h3>
+                                        How to remove background from picture on
+                                        Android?
+                                    </h3>
+                                    <div class="faq-item__icon">
+                                        <span class="plus"></span>
+                                    </div>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        To remove the background of a picture,
+                                        go to PixelPro.co/remove-background, and
+                                        upload your image. PixelPro will remove
+                                        the background for you, and you will be
+                                        able to download your HD image for free.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <!-- Footer left -->
+                    <div class="footer__left">
+                        <div class="footer-logo">
+                            <img
+                                src="../../assets/images/footer/footer-logo.svg"
+                                alt="Footer logo"
+                            />
+                        </div>
+
+                        <p class="section-desc footer-desc">
+                            PixelPro is a smart AI background removal and image
+                            editor tool that lets you edit single or bulk images
+                            with precision.
+                        </p>
+
+                        <div class="social-list">
+                            <a href="#!" class="social-item">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M24 12.0729C24 5.40566 18.627 0 12 0C5.373 0 0 5.40566 0 12.0729C0 18.0994 4.388 23.0935 10.125 23.999V15.563H7.078V12.0719H10.125V9.41388C10.125 6.3886 11.917 4.7165 14.658 4.7165C15.97 4.7165 17.344 4.95293 17.344 4.95293V7.92387H15.83C14.339 7.92387 13.874 8.8545 13.874 9.80927V12.0729H17.202L16.67 15.564H13.874V24C19.612 23.0935 24 18.0983 24 12.0729Z"
+                                        fill="white"
+                                    />
+                                </svg>
+                            </a>
+                            <a href="#!" class="social-item">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M23.953 4.38229C23.0545 4.78789 22.1026 5.05564 21.128 5.17689C22.1541 4.54454 22.9224 3.55286 23.291 2.38501C22.34 2.95405 21.286 3.36827 20.164 3.59896C19.4238 2.78736 18.4429 2.24907 17.3736 2.06768C16.3044 1.88628 15.2067 2.07193 14.2509 2.5958C13.2952 3.11966 12.5349 3.95243 12.0881 4.96478C11.6412 5.97713 11.533 7.11242 11.78 8.19435C7.69 7.99646 4.067 5.98175 1.64 2.93867C1.19879 3.70745 0.968664 4.58429 0.974 5.47628C0.974 7.22954 1.844 8.77056 3.162 9.6759C2.38086 9.6504 1.61697 9.43386 0.934 9.04432V9.10584C0.933557 10.271 1.32627 11.4004 2.04551 12.3024C2.76474 13.2046 3.76621 13.8238 4.88 14.055C4.1583 14.2533 3.40241 14.283 2.668 14.1421C2.98412 15.1449 3.59766 16.0214 4.42301 16.6495C5.24837 17.2775 6.24435 17.6258 7.272 17.6456C5.53153 19.046 3.38248 19.8062 1.17 19.8038C0.78 19.8038 0.391 19.7802 0 19.7351C2.25571 21.216 4.87851 22.002 7.557 22C16.61 22 21.555 14.3144 21.555 7.66119C21.555 7.44588 21.555 7.23057 21.54 7.01525C22.506 6.30253 23.3392 5.41765 24 4.40279L23.953 4.38229Z"
+                                        fill="#C3C3C3"
+                                    />
+                                </svg>
+                            </a>
+                            <a href="#!" class="social-item">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M23.498 6.15506C23.3624 5.64162 23.095 5.173 22.7226 4.79613C22.3502 4.41926 21.8858 4.14737 21.376 4.00769C19.505 3.5 12 3.5 12 3.5C12 3.5 4.495 3.5 2.623 4.00769C2.11341 4.14762 1.64929 4.41961 1.27708 4.79644C0.904861 5.17329 0.637591 5.64178 0.502 6.15506C0 8.04909 0 12 0 12C0 12 0 15.9509 0.502 17.8449C0.637586 18.3584 0.904975 18.827 1.27739 19.2039C1.64981 19.5807 2.11418 19.8527 2.624 19.9923C4.495 20.5 12 20.5 12 20.5C12 20.5 19.505 20.5 21.377 19.9923C21.8869 19.8528 22.3513 19.5809 22.7237 19.204C23.0961 18.8271 23.3635 18.3585 23.499 17.8449C24 15.9509 24 12 24 12C24 12 24 8.04909 23.498 6.15506ZM9.545 15.587V8.41302L15.818 12L9.545 15.587Z"
+                                        fill="#C3C3C3"
+                                    />
+                                </svg>
+                            </a>
+                            <a href="#!" class="social-item">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M12 2.163C15.204 2.163 15.584 2.175 16.85 2.233C20.102 2.381 21.621 3.924 21.769 7.152C21.827 8.417 21.838 8.797 21.838 12.001C21.838 15.206 21.826 15.585 21.769 16.85C21.62 20.075 20.105 21.621 16.85 21.769C15.584 21.827 15.206 21.839 12 21.839C8.796 21.839 8.416 21.827 7.151 21.769C3.891 21.62 2.38 20.07 2.232 16.849C2.174 15.584 2.162 15.205 2.162 12C2.162 8.796 2.175 8.417 2.232 7.151C2.381 3.924 3.896 2.38 7.151 2.232C8.417 2.175 8.796 2.163 12 2.163ZM12 0C8.741 0 8.333 0.014 7.053 0.072C2.695 0.272 0.273 2.69 0.073 7.052C0.014 8.333 0 8.741 0 12C0 15.259 0.014 15.668 0.072 16.948C0.272 21.306 2.69 23.728 7.052 23.928C8.333 23.986 8.741 24 12 24C15.259 24 15.668 23.986 16.948 23.928C21.302 23.728 23.73 21.31 23.927 16.948C23.986 15.668 24 15.259 24 12C24 8.741 23.986 8.333 23.928 7.053C23.732 2.699 21.311 0.273 16.949 0.073C15.668 0.014 15.259 0 12 0V0ZM12 5.838C8.597 5.838 5.838 8.597 5.838 12C5.838 15.403 8.597 18.163 12 18.163C15.403 18.163 18.162 15.404 18.162 12C18.162 8.597 15.403 5.838 12 5.838ZM12 16C9.791 16 8 14.21 8 12C8 9.791 9.791 8 12 8C14.209 8 16 9.791 16 12C16 14.21 14.209 16 12 16ZM18.406 4.155C17.61 4.155 16.965 4.8 16.965 5.595C16.965 6.39 17.61 7.035 18.406 7.035C19.201 7.035 19.845 6.39 19.845 5.595C19.845 4.8 19.201 4.155 18.406 4.155Z"
+                                        fill="#C3C3C3"
+                                    />
+                                </svg>
+                            </a>
+                            <a href="#!" class="social-item">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.188 11.846 12.905 13.291 12.905 14.785V20.452H9.351V9H12.765V10.561H12.811C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.337 7.433C4.193 7.433 3.274 6.507 3.274 5.368C3.274 4.23 4.194 3.305 5.337 3.305C6.477 3.305 7.401 4.23 7.401 5.368C7.401 6.507 6.476 7.433 5.337 7.433ZM7.119 20.452H3.555V9H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.771 24H22.222C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0L22.225 0Z"
+                                        fill="#C3C3C3"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Footer right -->
+                    <div class="footer__right">
+                        <div class="footer-row">
+                            <!-- Footer column 1 -->
+                            <section class="footer-column">
+                                <h3 class="section-heading footer-heading">
+                                    Product
+                                </h3>
+                                <ul class="footer-list">
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Remove Background
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Remove Objects
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Upscale
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Pricing
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            API Docs
+                                        </a>
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <!-- Footer column 2 -->
+                            <section class="footer-column">
+                                <h3 class="section-heading footer-heading">
+                                    Services
+                                </h3>
+                                <ul class="footer-list">
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            PixelPro Production
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Studio Hire
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Affiliate Program
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Request a Quote
+                                        </a>
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <!-- Footer column 3 -->
+                            <section class="footer-column">
+                                <h3 class="section-heading footer-heading">
+                                    Resources
+                                </h3>
+                                <ul class="footer-list">
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            How To BG Remove
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Our Blog
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Help Center
+                                        </a>
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <!-- Footer column 4 -->
+                            <section class="footer-column">
+                                <h3 class="section-heading footer-heading">
+                                    Company
+                                </h3>
+                                <ul class="footer-list">
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            About
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Contact
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Privacy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Terms
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="footer-link">
+                                            Cookies
+                                        </a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <p class="footer__copyright">Copyright & Design By Uihut</p>
+            </div>
+        </footer>
+    </body>
+    <script src="../../assets/javascript/faq.js"></script>
+</html>

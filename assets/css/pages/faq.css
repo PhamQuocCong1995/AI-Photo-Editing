@@ -1,3 +1,88 @@
+.questions {
+  padding: 52px 0 100px;
+}
+.questions .container {
+  width: 1170px;
+}
+.questions-heading strong {
+  background: linear-gradient(110deg, #722fff 54.47%, #b12eff 97.51%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.questions-desc {
+  margin-top: 18px;
+}
+.questions .faq__inner {
+  padding: 0;
+}
+.questions .faq-list {
+  margin-top: 47px;
+}
+.questions .faq-item {
+  margin: 24px auto 0;
+}
 
+.more-question {
+  padding: 80px 0;
+}
+.more-question .container {
+  padding: 0 100px;
+  width: 1170px;
+}
+.more-question__inner {
+  border-radius: 20px;
+  background: linear-gradient(108deg, #b12eff 23.26%, #722fff 100.11%);
+  padding: 48px 101px;
+}
+.more-question .avatar-list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.more-question .avatar-list .avatar {
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid #fff;
+  border-radius: 200px;
+}
+.more-question .avatar-list .avatar img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.more-question .avatar-list .avatar:nth-child(1) {
+  margin-right: 8px;
+}
+.more-question .avatar-list .avatar:nth-child(3) {
+  margin-left: 8px;
+}
+.more-question .avatar-list .avatar--bigger {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+}
+.more-question-heading {
+  font-size: 2.8rem;
+  margin-top: 28px;
+  font-weight: 600;
+  line-height: 1.36; /* 135.714% */
+}
+.more-question-desc {
+  margin-top: 12px;
+}
+.more-question-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 28px;
+}
+.more-question-cta a {
+  min-width: 155px;
+  border-radius: 25px;
+  background: var(--white-white, #fff);
+  color: #0058ff;
+}
 
 /*# sourceMappingURL=faq.css.map */
