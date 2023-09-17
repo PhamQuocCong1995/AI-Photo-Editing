@@ -462,17 +462,12 @@
                         width: 370px;
 
                         .title {
-                            color: color.$text-color;
                             font-size: 2.8rem;
-                            font-weight: 600;
-                            line-height: 1.36; /* 135.714% */
+                            text-align: unset;
                         }
 
                         .description {
-                            color: color.$desc-color;
-                            font-size: 1.6rem;
-                            font-weight: 400;
-                            line-height: 1.75; /* 175% */
+                            text-align: unset;
                             margin-top: 16px;
                         }
                     }
@@ -639,16 +634,13 @@
 
             .title {
                 font-size: 2.8rem;
-                font-weight: 600;
-                line-height: 1.36; /* 135.714% */
-                color: color.$text-color;
+                text-align: unset;
             }
 
             .desc {
-                color: color.$desc-color;
+                text-align: unset;
                 margin-top: 16px;
                 font-size: 1.4rem;
-                font-weight: 400;
                 line-height: 1.57; /* 157.143% */
             }
 
@@ -718,7 +710,7 @@
                 align-items: center;
                 justify-content: space-between;
 
-                h3 {
+                h6 {
                     color: color.$text-color;
                     font-size: 2.4rem;
                     font-weight: 500;
