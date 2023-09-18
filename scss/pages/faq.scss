@@ -97,8 +97,14 @@
         a {
             min-width: 155px;
             border-radius: 25px;
-            background: var(--white-white, #fff);
+            background: #fff;
             color: #0058ff;
+            transition: 0.25s;
+
+            &:hover {
+                color: color.$text-color;
+                background: #0058ff;
+            }
         }
     }
 }

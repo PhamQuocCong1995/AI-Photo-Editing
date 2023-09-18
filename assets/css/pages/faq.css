@@ -81,8 +81,13 @@
 .more-question-cta a {
   min-width: 155px;
   border-radius: 25px;
-  background: var(--white-white, #fff);
+  background: #fff;
   color: #0058ff;
+  transition: 0.25s;
+}
+.more-question-cta a:hover {
+  color: #fff;
+  background: #0058ff;
 }
 
 /*# sourceMappingURL=faq.css.map */
