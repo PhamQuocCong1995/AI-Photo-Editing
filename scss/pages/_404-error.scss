@@ -1,0 +1,59 @@
+@use "../abstracts/color";
+@use "../abstracts/mixins";
+
+body {
+    height: 100vh;
+}
+
+.error {
+    position: relative;
+    padding: 52px 0 70px;
+
+    .container {
+        position: relative;
+        width: 1170px;
+    }
+
+    &-heading {
+        display: block;
+        width: 878px;
+        margin: 0 auto;
+        font-size: 8.4rem;
+        line-height: 1.17; /* 116.667% */
+
+        strong {
+            background: linear-gradient(92deg, #ffcb01 33.11%, #ff5993 69.84%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &-cta {
+        @include mixins.flexCenter;
+        margin-top: 42px;
+        a {
+            min-width: 162px;
+            border-radius: 25px;
+        }
+    }
+
+    &-404 {
+        transform: translate(68px, -14px);
+    }
+
+    &-decor1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.copy-right {
+    color: color.$desc-color;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75; /* 175% */
+    text-align: center;
+    margin-top: 50px;
+}

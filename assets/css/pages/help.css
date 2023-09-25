@@ -1,3 +1,68 @@
+.help-center {
+  padding: 62px 0;
+  background: linear-gradient(107deg, #0095ff 28.4%, #0058ff 99.15%);
+}
+.help-center .search-box {
+  display: block;
+  width: 387px;
+  height: 52px;
+  border-radius: 70px;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.16);
+  margin: 40px auto 0;
+  padding: 12px 28px;
+  display: flex;
+  align-items: center;
+}
+.help-center .search-box input {
+  color: #fff;
+  border: none;
+  outline: none;
+  background: transparent;
+  margin-left: 14px;
+  font-size: 1.4rem;
+}
+.help-center .search-box input::placeholder {
+  color: #e8e8e8;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+}
 
+.help-menu {
+  padding: 110px 0 120px;
+}
+.help-menu .container {
+  width: 1170px;
+}
+.help-menu .help-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 33px 30px;
+}
+.help-menu .help-item {
+  width: 370px;
+  border-radius: 16px;
+  border: 1px solid #5d5d5d;
+  background: #2e2e2e;
+  padding: 36px 30px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.help-menu .help-item-icon {
+  width: 120px;
+  height: 120px;
+}
+.help-menu .help-item .title {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.17; /* 116.667% */
+  margin-top: 40px;
+}
+.help-menu .help-item .desc {
+  margin-top: 16px;
+}
 
 /*# sourceMappingURL=help.css.map */
